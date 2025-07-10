@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Your Name / Site Title"
+title                    : "Yutong's Page"
 title_separator          : "-"
 name                     : &name "Yutong Wang"
 description              : &description "personal description"
