@@ -16,15 +16,12 @@ Currently searching for research opportunities in Artificial Intelligence on **c
 News
 ======
 **2025**  
-*October* — Launched this website and started looking for **AI opportunities in clinical/biomedical applications**.  
-*September* — Working on **DPI Prediction** and **Drug Design** projects at SCUT.
+*June* — I will be visiting UCI, working as a research intern in [Prof. Xiaohui Xie](https://ics.uci.edu/~xhx/)'s lab.
 
 **2024**  
-*June* — Completed core courses in **Biomedical Engineering**; joined a project on medical imaging.  
-*April* — Presented a course project on **3D imaging**; repo available [here](#).
+*April* — I will start working with [Prof. Shidang Xu](https://xushidanggroup.netlify.app/) at SCUT, focusing on **computer aided drug design**.
 
 **2023**  
-*November* — Began undergraduate research training in computational biology.  
-*June* — Admitted to **South China University of Technology (SCUT)**, B.Eng. in **Biomedical Engineering**.
+*Augest* — Admitted to South China University of Technology (SCUT), B.Eng. in Biomedical Engineering.
 
 
