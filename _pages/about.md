@@ -1,13 +1,13 @@
 ---
 permalink: /
-title: "Welcome to Yutong Wang's page!"
+title: "Hi! This is Yutong Wang!"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-Hi! This is Yutong Wang
+About
 ======
 I am a B.Eng. student in **Biomedical Engineering** at **South China University of Technology**(SCUT).  
 My research focuses on **DPI Prediction** and **Drug Design**.  
