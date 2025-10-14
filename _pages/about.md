@@ -6,10 +6,10 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
+<br><br>
 About
 ======
-I am a B.Eng. student in **Biomedical Engineering** at **South China University of Technology**(SCUT).  
+A B.Eng. student in **Biomedical Engineering** at **South China University of Technology**(SCUT).  
 My research focuses on **DPI Prediction** and **Drug Design**.  
 Currently searching for research opportunities in generation models on **clinical** or **biomedical applications**.
  
