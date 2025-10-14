@@ -24,12 +24,12 @@ author:
   # Biographic information
   avatar           : "profile.jpg"
   name             : "Yutong (Anthony) Wang"
-  pronouns         : # example: "she/her"  
+  pronouns         : "he"  
   bio              : "study hard, play hard"
   location         : "Guangzhou, China"
   employer         : "South China University of Technology"
   uri              : # URL
-  email            : "anthonywang0705@gmail.com" 
+  email            : "bsanthony_wang@mail.scut.edu.cn" 
 
   # Academic websites
   academia         : # URL
