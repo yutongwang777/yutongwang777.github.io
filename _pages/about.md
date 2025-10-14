@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Hi! This is Yutong Wang!"
+title: ""
 author_profile: true
 redirect_from: 
   - /about/
