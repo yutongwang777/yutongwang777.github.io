@@ -11,7 +11,7 @@ About
 ======
 B.Eng. student in **Biomedical Engineering** at **South China University of Technology**(SCUT).  
 My research focuses on **DPI Prediction** and **Drug Design**.  
-Currently searching for research opportunities in generation models on **clinical** or **biomedical applications**.
+Currently searching for research opportunities in **Machine Learning** on **clinical** or **biomedical applications**.
  
 News
 ======
