@@ -22,6 +22,6 @@ News
 *April* — I will start working with [Prof. Shidang Xu](https://xushidanggroup.netlify.app/) at SCUT, focusing on **computer aided drug discovery**.
 
 **2022**  
-*Augest* — Admitted to South China University of Technology (SCUT), B.Eng. in Biomedical Engineering.
+*Augest* — I have been admitted to SCUT in Biomedical Engineering, kicking off my college journey!
 
 
