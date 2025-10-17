@@ -21,7 +21,7 @@ News
 **2024**  
 *April* — I will start working with [Prof. Shidang Xu](https://xushidanggroup.netlify.app/) at SCUT, focusing on **computer aided drug design**.
 
-**2023**  
+**2022**  
 *Augest* — Admitted to South China University of Technology (SCUT), B.Eng. in Biomedical Engineering.
 
 
