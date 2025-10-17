@@ -24,7 +24,7 @@ author:
   # Biographic information
   avatar           : "profile.jpg"
   name             : "Yutong (Anthony) Wang"
-  pronouns         : "he"  
+  pronouns         : #"he"  
   bio              : "study hard, play hard"
   location         : "Guangzhou, China"
   employer         : "South China University of Technology"
