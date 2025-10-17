@@ -19,7 +19,7 @@ News
 *June* — I will be visiting UCI, working as a research intern in [Prof. Xiaohui Xie](https://ics.uci.edu/~xhx/)'s lab.
 
 **2024**  
-*April* — I will start working with [Prof. Shidang Xu](https://xushidanggroup.netlify.app/) at SCUT, focusing on **computer aided drug design**.
+*April* — I will start working with [Prof. Shidang Xu](https://xushidanggroup.netlify.app/) at SCUT, focusing on **computer aided drug discovery**.
 
 **2022**  
 *Augest* — Admitted to South China University of Technology (SCUT), B.Eng. in Biomedical Engineering.
