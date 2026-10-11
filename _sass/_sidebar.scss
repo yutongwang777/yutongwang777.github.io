@@ -129,6 +129,10 @@
 }
 
 .sidebar .author__name {
+  @include breakpoint($large) {
+    margin-bottom: 1em;
+    padding-left: .2rem;
+  }
   @include breakpoint($medium) {
     font-size: $type-size-3;
   }

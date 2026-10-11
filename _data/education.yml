@@ -1,0 +1,9 @@
+- school: "South China University of Technology"
+  degree: "Bachelor in Biomedical Engineering"
+  dates: "September 2022 – June 2026"
+  logo: "/images/education/scut.jpg"
+- school: "Nanyang Technological University"
+  degree: "Master in Signal Processing & Machine Learning"
+  dates: "September 2026 - Present"
+  logo: "/images/education/ntu-cropped.svg"
+  logo_wide: true

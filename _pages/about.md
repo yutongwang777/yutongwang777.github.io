@@ -14,7 +14,6 @@ I am **Yutong (Anthony) Wang**, studying **Biomedical Engineering** at **South C
 
 My research experience includes work with **[Prof. Shidang Xu](https://xushidanggroup.netlify.app/)** at SCUT and a research internship in **Prof. Xiaohui Xie's lab** at the **University of California, Irvine**. I am interested in research opportunities in machine learning for clinical and biomedical applications.
 
-[Download my CV]({{ site.author.cv | relative_url }}) · [Email](mailto:{{ site.author.email }}) · [GitHub](https://github.com/{{ site.author.github }})
 
 # 🔥 News {#news}
 
@@ -24,11 +23,7 @@ My research experience includes work with **[Prof. Shidang Xu](https://xushidang
 
 # 🎓 Education {#education}
 
-**South China University of Technology**<br>
-Bachelor in Biomedical Engineering · September 2022 – June 2026
-
-**Nanyang Technological University**<br>
-Master in Signal Processing & Machine Learning · September 2026 - Present
+{% include education.html %}
 
 # 📖 Publication {#publication}
 

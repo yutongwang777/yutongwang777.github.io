@@ -3,14 +3,41 @@ $publication-accent: #224b8d;
 
 .publication-list {
   container-type: inline-size;
+  display: grid;
+  gap: 1.1em;
+  margin: 1.25em 0 1.75em;
 }
 
 .publication-card {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 1.5em;
-  padding: 1.5em 0 2em;
-  border-bottom: 1px solid $border-color;
+  padding: 1.75em 2em;
+  border: 1px solid #dce1e6;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, .07);
+  transition: border-color .15s ease, box-shadow .15s ease;
+
+  &:hover {
+    border-color: $publication-accent;
+    box-shadow: 0 7px 22px rgba(34, 75, 141, .15);
+  }
+
+  // Keep resource and title links above the card-wide details link.
+  .publication-card__content a {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.publication-card__link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  cursor: pointer;
 }
 
 .publication-card__visual {
@@ -18,8 +45,10 @@ $publication-accent: #224b8d;
   text-align: center;
 }
 
-.publication-card__image-link {
+.publication-card__image {
   display: block;
+  width: 66.666667%;
+  margin: 0 auto;
   background: #fff;
   border: 1px solid #edf0f2;
   box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
@@ -230,15 +259,19 @@ $publication-accent: #224b8d;
 }
 
 @media (max-width: 700px) {
-  .publication-card__image-link { max-width: 460px; margin: 0 auto; }
+  .publication-card__image { max-width: 306.666667px; }
   .publication-dialog { width: 100vw; max-width: none; }
   .publication-dialog__header { padding: .7em 1em; }
   .publication-dialog__body { padding: 1.25em 1em 1.5em; }
 }
 
+@media (max-width: 600px) {
+  .publication-card { padding: 1.25em 1em; border-radius: 12px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .publication-dialog[open] { animation: none; }
-  .publication-action { transition: none; }
+  .publication-action, .publication-card { transition: none; }
 }
 
 @keyframes publication-slide-in {

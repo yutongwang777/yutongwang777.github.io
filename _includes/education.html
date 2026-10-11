@@ -1,0 +1,18 @@
+<div class="education-list">
+  {% for entry in site.data.education %}
+  <article class="education-card" aria-labelledby="education-school-{{ forloop.index }}">
+    <div class="education-card__content">
+      <h2 id="education-school-{{ forloop.index }}" class="education-card__school">{{ entry.school | escape }}</h2>
+      <p class="education-card__degree">{{ entry.degree | escape }}</p>
+      <p class="education-card__dates">{{ entry.dates | escape }}</p>
+    </div>
+    <div class="education-card__logo{% if entry.logo_wide %} education-card__logo--wide{% endif %}">
+      {% if entry.logo %}
+      <img src="{{ entry.logo | relative_url }}" alt="{{ entry.school | escape }} crest" width="112" height="112" loading="lazy">
+      {% else %}
+      <div class="education-card__logo-placeholder" aria-label="School crest to be added"><span>School crest</span></div>
+      {% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</div>
