@@ -1,0 +1,221 @@
+# Verified publication metadata; JSON syntax is also valid YAML.
+[
+  {
+    "id": "e-cloudbind",
+    "title": "An electron-density point-cloud framework for robust protein-ligand interaction prediction",
+    "authors": [
+      {
+        "name": "Yujian Liu",
+        "equal_contribution": true,
+        "corresponding": false,
+        "highlight": false,
+        "affiliations": []
+      },
+      {
+        "name": "Yutong Wang",
+        "equal_contribution": true,
+        "corresponding": false,
+        "highlight": true,
+        "affiliations": []
+      },
+      {
+        "name": "Qingquan Wang",
+        "equal_contribution": true,
+        "corresponding": false,
+        "highlight": false,
+        "affiliations": []
+      },
+      {
+        "name": "Meitang Peng",
+        "equal_contribution": false,
+        "corresponding": false,
+        "highlight": false,
+        "affiliations": []
+      },
+      {
+        "name": "Yuan Chen",
+        "equal_contribution": false,
+        "corresponding": false,
+        "highlight": false,
+        "affiliations": []
+      },
+      {
+        "name": "Yuechuan Lin",
+        "equal_contribution": false,
+        "corresponding": false,
+        "highlight": false,
+        "affiliations": [],
+        "orcid": "https://orcid.org/0009-0005-8646-9276"
+      },
+      {
+        "name": "Dongxu Shen",
+        "equal_contribution": false,
+        "corresponding": false,
+        "highlight": false,
+        "affiliations": []
+      },
+      {
+        "name": "Xiaoli Liu",
+        "equal_contribution": false,
+        "corresponding": false,
+        "highlight": false,
+        "affiliations": []
+      },
+      {
+        "name": "Shidang Xu",
+        "equal_contribution": false,
+        "corresponding": true,
+        "highlight": false,
+        "affiliations": [],
+        "orcid": "https://orcid.org/0000-0002-7013-3672"
+      },
+      {
+        "name": "Bin Liu",
+        "equal_contribution": false,
+        "corresponding": false,
+        "highlight": false,
+        "affiliations": [],
+        "orcid": "https://orcid.org/0000-0002-0956-2777"
+      }
+    ],
+    "venue": "Nature Communications",
+    "venue_short": "Nat. Commun.",
+    "volume": "17",
+    "article_number": "7424",
+    "year": 2026,
+    "doi": "10.1038/s41467-026-74196-5",
+    "status": "published",
+    "received": "2025-10-13",
+    "accepted": "2026-06-01",
+    "published": "2026-06-11",
+    "version_of_record": "2026-07-28",
+    "abstract": "Accurate protein-ligand affinity prediction typically depends on precise 3D coordinates, limiting robustness when structures are low-resolution or predicted. We introduce E-CloudBind, a framework that fuses electron-density point clouds with intrinsic molecular graphs to model non-covalent and covalent interactions without relying on sub-ångström accuracy. Ligand electron densities are obtained by semi-empirical quantum calculations, whereas protein pockets are represented by van der Waals-guided Gaussian point clouds, a physically motivated proxy that preserves interaction geometry while tolerating coordinate noise. Point-cloud encoders capture local non-covalent patterns and a heterogeneous graph neural network integrates them with covalent features for affinity regression. Across PDBbind splits and out-of-distribution scenarios, E-CloudBind matches or exceeds leading sequence-, graph- and structure-based baselines, with markedly reduced sensitivity to resolution and to experimental-versus-predicted proteins. Case studies further illustrate atom-level interpretability and large-scale virtual screening. By decoupling interaction learning from exact coordinates, E-CloudBind enables robust structure-based modeling on heterogeneous conditions.",
+    "summary": "E-CloudBind predicts protein–ligand binding affinity by combining electron-density point clouds with molecular graphs, improving robustness to coordinate noise, low-resolution structures, and predicted protein conformations.",
+    "image": "/images/publications/e-cloudbind/figure-1.png",
+    "detail_image": "/images/publications/e-cloudbind/figure-2.png",
+    "figures": [
+      {
+        "number": 1,
+        "image": "/images/publications/e-cloudbind/figure-1.png",
+        "title": "Fig. 1: Electron-density-adaptive definition of receptor-ligand non-covalent interactions (NCIs) and a noise-tolerant feature pipeline.",
+        "caption": "a Conventional drug-protein interaction (DPI) model prediction pipeline. Conventional DPI models adopt a uniform cut-off scheme, defining a NCI whenever any receptor and ligand atoms fall within a global Euclidean cutoff (e.g., 2.5 Å, yellow envelopes). Since the same radius is applied to all elements, atom identity is ignored, leading to spurious contacts in some cases (red dashed line). The constructed interaction graph is then passed into a graph neural network (GNN) for affinity prediction via message passing. b E-CloudBind prediction pipeline. E-CloudBind employs a density-adaptive scheme. Each atom is represented as a Gaussian electron cloud, and an interaction is recorded when its isosurfaces overlap. Type-specific radii (e.g., 1.2 Å for N, 1.7 Å for S) emerge naturally from local electron densities, preserving chemical identity and eliminating artefactual overlaps. The resulting electron cloud is encoded as a point cloud and input into a point-cloud encoder (PointNet) for affinity prediction. c Robustness of the point-cloud encoding. Conventional graph-based DPI models exhibit high sensitivity to coordinate uncertainty (top): even modest perturbations (Δx ≈ 0.5 Å) can reshuffle atomic contacts, leading to large fluctuations in features learned by the 3D GNN and increased prediction error. In contrast, E-CloudBind employs Gaussian sampling within adaptive envelopes (bottom) to generate a point-cloud representation that is inherently rotation- and translation-invariant, preserving the true contact geometry even under positional perturbations. d Performance and generalization. Density-adaptive envelopes and point-cloud model enable a physically grounded, resolution-robust description of NCIs, leading to improved affinity prediction. The approach excels not only on high-quality structural data, but also demonstrates strong robustness on low-resolution, experimental carbon-based (Exp.) and silicon-based (Sil.) structures, and four types of out-of-distribution (OOD) targets. Performance was evaluated using mean absolute error (MAE) and the Pearson correlation coefficient (Pearson).",
+        "source_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-026-74196-5/MediaObjects/41467_2026_74196_Fig1_HTML.png",
+        "figure_page": "https://www.nature.com/articles/s41467-026-74196-5/figures/1",
+        "width": 1754,
+        "height": 1388
+      },
+      {
+        "number": 2,
+        "image": "/images/publications/e-cloudbind/figure-2.png",
+        "title": "Fig. 2: Workflow of E-CloudBind framework for binding-affinity prediction.",
+        "caption": "a Quantum electron density modeling for ligand. Starting from atomic symbols and Cartesian coordinates, frontier molecular orbitals are computed using a quantum chemistry solver based on density functional theory or ab initio methods (DFT/ab-initio) (a1). While highest occupied/lowest unoccupied molecular orbital (HOMO/LUMO) are shown for visualization, downstream modeling uses the total electron density reconstructed from all occupied orbitals 70 . The resulting coefficients are used to evaluate the electron density ρ (a2), which is then thresholded and down-sampled to convert ≈10 6 grid points into an ≈10 3 point “electron-density ligand” cloud (a3). b Gaussian electron density modeling for pocket. For each pocket atom (b1), a multivariate Gaussian kernel centered at the atom position provides a proxy for the local electron distribution (b2). The kernel width is linked to the van der Waals (vdW) radius, and density-weighted sampling generates pseudo-electrons with a higher concentration inside the 1 \\(\\times\\) r vdW region than in the 1-2 \\(\\times\\) r vdW shell (b3). Repeating the procedure for all atoms yields an “electron-density pocket” that captures non-covalent interaction geometry while remaining tolerant to coordinate noise (b4). c Covalent graph construction and non-covalent interaction extraction. Atomic covalent connectivity is represented as a directed chemical graph and embedded by a covalent graph encoder (top). The electron-density ligand and pocket are individually clustered by K-means clustering, and each cluster is processed through a 3D point-cloud network to extract non-covalent embeddings (middle, bottom). The curved blue arrow denotes the direction of information aggregation among the point clouds. d Feature fusion and prediction. Covalent and non-covalent node and edge feature vectors are concatenated and fed into a heterogeneous graph convolutional network (GCN) that jointly reasons over both interaction types. The resulting edge-level scores are aggregated to deliver the predicted binding affinity. By combining quantum-mechanical density information with topology-aware encoders, E-CloudBind captures type-specific interaction ranges, preserves anisotropic electrostatics, and remains robust across experimental resolutions and AlphaFold2-predicted structures 23 .",
+        "source_url": "https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-026-74196-5/MediaObjects/41467_2026_74196_Fig2_HTML.png",
+        "figure_page": "https://www.nature.com/articles/s41467-026-74196-5/figures/2",
+        "width": 2005,
+        "height": 1791
+      },
+      {
+        "number": 3,
+        "image": "/images/publications/e-cloudbind/figure-3.png",
+        "title": "Fig. 3: Robustness and generalization of the DPI model in comparison with three state-of-the-art baselines (PSICHIC 20 , SIGN 17 and DMFF 46 ).",
+        "caption": "a Experimental design. a1 10-fold cross-validation was performed on the union of PDBbind 2013, 2016 and 2019 42 . a2 To quantify robustness to crystallographic resolution, model performance was evaluated on experimentally resolved structures across different crystallographic resolutions (Å). a3 Generalization to silico-predicted structures (Sil.) was assessed by replacing experimental structures (Exp.) with AlphaFold2 23 (AF2) models for identical amino-acid sequences. a4 Structural-complexity robustness was evaluated by combining ligands of varying molecular complexity with proteins of differing fold complexity and measuring performance across the resulting grid. b Robustness of resolution on model performance. Absolute error (AE) increases with resolution (Å) across four methods. Solid lines represent least-squares fits, and shaded areas indicate 95% confidence intervals. The slopes for E-CloudBind, SIGN, PSICHIC, and DMFF increase progressively, with DMFF exhibiting a statistically significant slope ( p = 0.046), indicating high sensitivity to resolution. In contrast, the stable slope of E-CloudBind suggests robust performance across varying resolutions. c Structural robustness across experimental and AF2 predictions. For every model, paired bars report mean absolute error (MAE, left) and Pearson correlation coefficient (Pearson, right). E-CloudBind attains both the lowest MAE and the highest Pearson on experimental as well as AF2 structures, with a deviation of only 0.012 MAE units between sources. d , e E-CloudBind consistently outperforms baselines in complexity-based evaluations. In Fig. d, the distribution of per-pair AE deviations from the corresponding method’s MAE on the DAVIS dataset 47 indicates that E-CloudBind exhibits a lower and more stable median deviation (0.280) than all baselines. Fig. e visualizes per-pair AE as heat maps across methods, with columns ordered by increasing protein structural complexity (Relative Contact Order, RCO) 48 and rows by increasing ligand structural complexity (Bertz Complexity Index, BertzCT) 49 . Each cell represents a protein-ligand pair, and lighter colors denote lower AE. E-CloudBind achieves the lowest MAE (1.520) and standard deviation (0.340) across all combinations, whereas the baseline models degrade in specific complexity regimes and generalize less consistently.",
+        "source_url": "https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs41467-026-74196-5/MediaObjects/41467_2026_74196_Fig3_HTML.png",
+        "figure_page": "https://www.nature.com/articles/s41467-026-74196-5/figures/3",
+        "width": 1200,
+        "height": 1688
+      },
+      {
+        "number": 4,
+        "image": "/images/publications/e-cloudbind/figure-4.png",
+        "title": "Fig. 4: Efficiency of van der Waals-guided Gaussian sampling strategy and generalization of the DPI model.",
+        "caption": "a Computational alternatives for modeling ligand electron clouds. Electron-density clouds obtained from xTB quantum calculations (left) and the proposed van der Waals Gaussian sampler (right) are each coupled to the same model and tested on PDBbind 2013-2019 42 . b Performance and prediction distribution on PDBbind test sets (blue/green/yellow)for quantum-derived electron-density modeling (top) and Gaussian-based modeling (bottom). Differences are within ≤ 0.032 for mean absolute error (MAE) and ≤ 0.020 for Pearson correlation coefficient (Pearson), indicating that the inexpensive Gaussian procedure achieves comparable performance to quantum-derived modeling. c Computational cost of electron-cloud modeling. Runtime comparison of the quantum calculation pipeline (QM) versus the proposed van der Waals Gaussian sampling pipeline (GM) on the PDBbind dataset, showing fewer preprocessing steps and lower preprocessing time for GM. d , e Rigid transformation invariance. The ligand and pocket electron clouds were jointly rotated around the z-axis by 0° to 180° at 15° intervals, with a fixed translation applied. Performance remains nearly unchanged across rotations, with only minor deviations from the 0° setting. f , g Electron-cloud distortions under non-rigid transformations. Ligand edges and the corresponding electron-cloud clusters were progressively corrupted to mimic non-rigid strain. Performance degrades monotonically from 0 to 90% corruption, indicating reliance on preserving correct geometric patterns in the electron cloud. h Data-partition strategies. Warm-start performance was evaluated under a random split, whereas cold-start performance was assessed under holdout splits based on (i) ligand scaffolds, (ii) protein sequence-identity clusters, and (iii) joint protein-ligand complex similarity for evaluation on previously unseen patterns. i Comparative performance under warm-start and cold-start splits. E-CloudBind yields the highest Pearson and lowest MAE in every setting. Across the three cold-start regimes, its MAE increases by only 0.026, whereas SIGN 17 , PSICHIC 20 and DMFF 46 deteriorate by 0.101-0.235. j Resolution sensitivity under warm-start and cold-start splits. Absolute error (AE) versus crystallographic resolution for the four data splits (solid line = least-squares fit; shaded band = 95% confidence). E-CloudBind retains a near-zero slope in all splits, while baseline models show marked error inflation as resolution deteriorates.",
+        "source_url": "https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs41467-026-74196-5/MediaObjects/41467_2026_74196_Fig4_HTML.png",
+        "figure_page": "https://www.nature.com/articles/s41467-026-74196-5/figures/4",
+        "width": 1200,
+        "height": 1552
+      },
+      {
+        "number": 5,
+        "image": "/images/publications/e-cloudbind/figure-5.png",
+        "title": "Fig. 5: Consistent highlighting of interaction sites in diverse complexes.",
+        "caption": "To visualize model interpretability in identifying non-covalent interactions (specifically hydrogen bonds), four representative protein-ligand complexes spanning a range of protein structural complexity were selected and ordered from low to high by Relative Contact Order (RCO) (PDB IDs: 3PXF, 6DAR, 5WMT, and 1BCU) 48 . Regardless of the complexity level of the protein or ligand, the model consistently assigned higher attention weights to non-carbon atoms on the ligands that were likely to form non-covalent interactions within the protein binding pocket.",
+        "source_url": "https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs41467-026-74196-5/MediaObjects/41467_2026_74196_Fig5_HTML.png",
+        "figure_page": "https://www.nature.com/articles/s41467-026-74196-5/figures/5",
+        "width": 1200,
+        "height": 953
+      },
+      {
+        "number": 6,
+        "image": "/images/publications/e-cloudbind/figure-6.png",
+        "title": "Fig. 6: Prospective virtual screening guided by the E-CloudBind affinity predictor.",
+        "caption": "Three therapeutically relevant targets were selected: Penicillin-Binding Protein 1 A (PBP1A; PDB: 4OON), the SARS-CoV-2 Main Protease (Mpro; PDB: 7RFS) and the B-Cell Lymphoma 2 (BCL-2; PDB: 4MAN). A library of 80,383 drug-like compounds from ZINC 55 was evaluated by DPI and the top 5% of candidates for each protein were re-docked with AutoDock Vina 80 . For every target the left-most column shows the crystal structure with the binding pocket highlighted (red dashed box). The next three columns depict representative high-ranking candidates. Upper panels display the best-scoring Vina pose, annotated with the docking score. Lower panels visualize residue- and atom-level attention weights inferred by E-CloudBind; darker blue denotes higher contribution. The right-most column provides the co-crystallized ligand for reference, docked and analyzed in the same fashion. Across all systems, the attention hotspots coincide with hydrogen-bond donors/acceptors and π-stacking residues identified in the crystal complexes, confirming that E-CloudBind learns chemically meaningful non-covalent patterns. Notably, many screened compounds exhibit more favorable Vina score values (e.g., −9.45 for BCL-2) than the co-crystallized ligands (−8.84), highlighting chemotypes worthy of experimental follow-up. The combination of rapid Gaussian-based electron density modeling, accurate affinity prediction and interpretable attention maps demonstrates E-CloudBind’s suitability for structure-based lead discovery.",
+        "source_url": "https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs41467-026-74196-5/MediaObjects/41467_2026_74196_Fig6_HTML.png",
+        "figure_page": "https://www.nature.com/articles/s41467-026-74196-5/figures/6",
+        "width": 1200,
+        "height": 1266
+      },
+      {
+        "number": 7,
+        "image": "/images/publications/e-cloudbind/figure-7.png",
+        "title": "Fig. 7: Virtual screening analysis and molecular dynamics simulation results.",
+        "caption": "a Distributions of synthesizability metrics measured by Synthetic Accessibility Score (SAScore) and Synthetic Complexity Score (SCScore). For the top 10,000 ZINC candidates, empirical cutoffs (SAScore ≤ 6.0; SCScore ≤ 4.0) yield pass rates of 99.77%, 74.34%, and 74.17% for SAScore, SCScore, and both, respectively. b Root Mean Square Deviation (RMSD) analysis of the reference ligand (Navitoclax), ZINC38931626, ZINC94753678 and ZINC57101123 complexes. RMSD was plotted over 400 ns for Navitoclax and candidates. In all systems, ligand RMSD reaches a plateau after 100 ns and remains bounded within 0.20–0.35 nm, with no evidence of abrupt drift. c Representative Molecular Dynamics (MD) simulation results and corresponding binding affinities. MD simulations were performed with GROMACS 82 , and the resulting trajectories were used to estimate binding affinities (kcal·mol⁻¹) for the candidates. The candidates exhibit affinities comparable to the reference ligand, consistent with stable binding in the BCL-2 pocket.",
+        "source_url": "https://media.springernature.com/lw1200/springer-static/image/art%3A10.1038%2Fs41467-026-74196-5/MediaObjects/41467_2026_74196_Fig7_HTML.png",
+        "figure_page": "https://www.nature.com/articles/s41467-026-74196-5/figures/7",
+        "width": 1200,
+        "height": 870
+      }
+    ],
+    "links": {
+      "paper": "https://doi.org/10.1038/s41467-026-74196-5",
+      "publisher": "https://www.nature.com/articles/s41467-026-74196-5",
+      "pdf": "/files/publications/e-cloudbind/article.pdf",
+      "publisher_pdf": "https://www.nature.com/articles/s41467-026-74196-5.pdf",
+      "code": "https://github.com/Liuyujian0408/DPI",
+      "code_archive": "https://doi.org/10.5281/zenodo.19851869",
+      "data": "https://doi.org/10.6084/m9.figshare.30343492",
+      "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42277055/",
+      "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13408660/"
+    },
+    "supplementary": [
+      {
+        "title": "Supplementary Information",
+        "path": "/files/publications/e-cloudbind/supplementary-information.pdf",
+        "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-026-74196-5/MediaObjects/41467_2026_74196_MOESM1_ESM.pdf"
+      },
+      {
+        "title": "Description of Additional Supplementary Files",
+        "path": "/files/publications/e-cloudbind/supplementary-files-description.pdf",
+        "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-026-74196-5/MediaObjects/41467_2026_74196_MOESM2_ESM.pdf"
+      },
+      {
+        "title": "Supplementary Data 1",
+        "path": "/files/publications/e-cloudbind/supplementary-data-1.zip",
+        "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-026-74196-5/MediaObjects/41467_2026_74196_MOESM3_ESM.zip"
+      },
+      {
+        "title": "Transparent Peer Review",
+        "path": "/files/publications/e-cloudbind/peer-review.pdf",
+        "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-026-74196-5/MediaObjects/41467_2026_74196_MOESM4_ESM.pdf"
+      },
+      {
+        "title": "Source Data",
+        "path": "/files/publications/e-cloudbind/source-data.zip",
+        "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41467-026-74196-5/MediaObjects/41467_2026_74196_MOESM5_ESM.zip"
+      }
+    ],
+    "license": {
+      "name": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "credit": "Liu, Y., Wang, Y., Wang, Q. et al. Nature Communications 17, 7424 (2026). doi:10.1038/s41467-026-74196-5. © The Author(s) 2026.",
+      "image_modifications": "None; downloaded publisher images are retained unchanged."
+    },
+    "sources": [
+      "https://www.nature.com/articles/s41467-026-74196-5",
+      "https://api.crossref.org/works/10.1038/s41467-026-74196-5",
+      "https://github.com/Liuyujian0408/DPI",
+      "https://zenodo.org/api/records/19851869",
+      "https://api.figshare.com/v2/articles/30343492"
+    ],
+    "retrieved": "2026-10-11"
+  }
+]

@@ -1,0 +1,22 @@
+<div class="publication-list">
+  {% for paper in site.data.publications %}
+  <article class="publication-card" aria-labelledby="publication-title-{{ paper.id }}">
+    <div class="publication-card__visual">
+      <a class="publication-card__image-link pub-details" href="{{ paper.links.pdf | relative_url }}" data-publication-id="{{ paper.id }}" aria-label="View figures and details for {{ paper.title | escape }}">
+        <img src="{{ paper.image | relative_url }}" alt="{{ paper.figures[0].title | escape }}" width="{{ paper.figures[0].width }}" height="{{ paper.figures[0].height }}" loading="lazy">
+      </a>
+      <span class="publication-card__venue">Accepted by {{ paper.venue | escape }}</span>
+    </div>
+    <div class="publication-card__content">
+      <h2 id="publication-title-{{ paper.id }}" class="publication-card__title"><a href="{{ paper.links.paper }}" target="_blank" rel="noopener noreferrer">{{ paper.title | escape }}</a></h2>
+      <p class="publication-card__authors">{% include publication-authors.html paper=paper %}</p>
+      <p class="publication-card__author-note">* Equal contribution · † Corresponding author</p>
+      <div class="publication-actions" aria-label="Publication resources">
+        <a class="publication-action pub-details" href="{{ paper.links.pdf | relative_url }}" data-publication-id="{{ paper.id }}">Details</a>
+        {% if paper.links.paper %}<a class="publication-action" href="{{ paper.links.paper }}" target="_blank" rel="noopener noreferrer">Paper</a>{% endif %}
+        {% if paper.links.code %}<a class="publication-action" href="{{ paper.links.code }}" target="_blank" rel="noopener noreferrer">Code</a>{% endif %}
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</div>

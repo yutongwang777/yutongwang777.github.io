@@ -1,0 +1,72 @@
+[
+  {
+    "path": "files/publications/e-cloudbind/source-data.zip",
+    "bytes": 24192542,
+    "sha256": "96eb694f0b58ba77946f91c512823c24ca64e0ab33e2f318ec26beaf9c104a2a"
+  },
+  {
+    "path": "files/publications/e-cloudbind/peer-review.pdf",
+    "bytes": 1626591,
+    "sha256": "6587ca16d7a77058a8f2838e624a18799986915866e473883a18b6242dd7cb86"
+  },
+  {
+    "path": "files/publications/e-cloudbind/supplementary-files-description.pdf",
+    "bytes": 70584,
+    "sha256": "0a465883b9839c12ef0ee627a215a2c34518db571824f9205fcaa19bd5e45cbf"
+  },
+  {
+    "path": "files/publications/e-cloudbind/supplementary-information.pdf",
+    "bytes": 1445574,
+    "sha256": "dd2f4e22470e875325dff57fc3170356e1ef8e5b2d265cb0b4c2a24f127c5654"
+  },
+  {
+    "path": "files/publications/e-cloudbind/supplementary-data-1.zip",
+    "bytes": 2797598,
+    "sha256": "3e855c9659134d25bc37f266a62cf569076efc66fbb307cb9398832522424276"
+  },
+  {
+    "path": "files/publications/e-cloudbind/article.pdf",
+    "bytes": 6758192,
+    "sha256": "cf9d22e7b1e00bb45efb9a1131951f85965c361574552ac4bb506678c22b1aca"
+  },
+  {
+    "path": "images/publications/e-cloudbind/figure-6.png",
+    "bytes": 1442815,
+    "sha256": "eed72b8fff7efbe23c849ae9a53d76a7999f48ef451d094e6486d866eaa665c7"
+  },
+  {
+    "path": "images/publications/e-cloudbind/figure-7.png",
+    "bytes": 575643,
+    "sha256": "2d1efbfe53eb3220b7793d6be6fb2412d8aff5c8cb8766bf38cbc47f6b428551"
+  },
+  {
+    "path": "images/publications/e-cloudbind/figure-5.png",
+    "bytes": 955577,
+    "sha256": "a5ba2189b06a166df30cd6819fe6f22a082d565cd6213ce4c95440227536a590"
+  },
+  {
+    "path": "images/publications/e-cloudbind/figure-4.png",
+    "bytes": 1060131,
+    "sha256": "f141fc92d1b87e589a1ad1fe0b0eec1442cd949eb2ebaa0ed2bc2c0aa851bda9"
+  },
+  {
+    "path": "images/publications/e-cloudbind/figure-1.png",
+    "bytes": 356628,
+    "sha256": "0087b7264913d4cea4fabb9e89a7272bfcae3aa0ba687d6eec331c5d67556fe8"
+  },
+  {
+    "path": "images/publications/e-cloudbind/figure-3.png",
+    "bytes": 1060417,
+    "sha256": "f8c8a2ff8657e8c84bfbb3aded1d79cc7ede3b24a56a17d78bd366257a3eab8b"
+  },
+  {
+    "path": "images/publications/e-cloudbind/figure-2.png",
+    "bytes": 721899,
+    "sha256": "0589bd3138924eb44fb99f83056f76856db2bf2aaec55e8bfaca350acd34155d"
+  },
+  {
+    "path": "docs/publications/e-cloudbind/code-v1.1.zip",
+    "bytes": 20489902,
+    "sha256": "ba0acf46d40db29f3dce73dbac2bf5fae835b3a1dda3e38c86b7f6646c4f4321"
+  }
+]

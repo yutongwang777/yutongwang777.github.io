@@ -39,6 +39,7 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+@import "publications";
 
 .paper-box {
     display: flex;
@@ -106,4 +107,9 @@ h1:before, .anchor:before {
     color: white;
     background-color: #00369f;
     font-size: .8em;
+}
+
+.author__urls .author__affiliation {
+    white-space: normal;
+    overflow-wrap: break-word;
 }

@@ -1,0 +1,27 @@
+{% for paper in site.data.publications %}
+<dialog class="publication-dialog" id="publication-dialog-{{ paper.id }}" aria-labelledby="publication-dialog-title-{{ paper.id }}">
+  <div class="publication-dialog__header">
+    <button type="button" class="publication-dialog__back" data-publication-close autofocus><span aria-hidden="true">←</span> Back to Publication</button>
+    <button type="button" class="publication-dialog__close" data-publication-close aria-label="Close publication details">×</button>
+  </div>
+  <div class="publication-dialog__body">
+    <p class="publication-dialog__eyebrow">{{ paper.venue | escape }} · {{ paper.year }} · Article {{ paper.article_number }}</p>
+    <h2 id="publication-dialog-title-{{ paper.id }}">{{ paper.title | escape }}</h2>
+    <p class="publication-dialog__authors">{% include publication-authors.html paper=paper %}</p>
+    <p class="publication-dialog__author-note">* Equal contribution · † Corresponding author</p>
+    <div class="publication-actions">
+      <a class="publication-action" href="{{ paper.links.paper }}" target="_blank" rel="noopener noreferrer">Paper</a>
+      <a class="publication-action" href="{{ paper.links.pdf | relative_url }}" target="_blank" rel="noopener noreferrer">PDF</a>
+      <a class="publication-action" href="{{ paper.links.code }}" target="_blank" rel="noopener noreferrer">Code</a>
+    </div>
+    <h3>Abstract</h3>
+    <p>{{ paper.abstract | escape }}</p>
+    <figure class="publication-dialog__figure">
+      <a href="{{ paper.detail_image | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="Open full-size framework figure">
+        <img src="{{ paper.detail_image | relative_url }}" alt="{{ paper.figures[1].title | escape }}" width="{{ paper.figures[1].width }}" height="{{ paper.figures[1].height }}" loading="lazy">
+      </a>
+    </figure>
+    <p class="publication-dialog__credit">{{ paper.license.credit | escape }} Figures reproduced unchanged under <a href="{{ paper.license.url }}" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.</p>
+  </div>
+</dialog>
+{% endfor %}
