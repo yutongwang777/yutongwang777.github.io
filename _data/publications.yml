@@ -217,5 +217,86 @@
       "https://api.figshare.com/v2/articles/30343492"
     ],
     "retrieved": "2026-10-11"
+  },
+  {
+    "id": "cdsr",
+    "title": "Minimal High-Resolution Patches Are Sufficient for Whole Slide Image Representation via Cascaded Dual-Scale Reconstruction",
+    "authors": [
+      {
+        "name": "Yujian Liu",
+        "highlight": false,
+        "corresponding": false
+      },
+      {
+        "name": "Yuechuan Lin",
+        "highlight": false,
+        "corresponding": false
+      },
+      {
+        "name": "Dongxu Shen",
+        "highlight": false,
+        "corresponding": false
+      },
+      {
+        "name": "Haoran Li",
+        "highlight": false,
+        "corresponding": false
+      },
+      {
+        "name": "Yutong Wang",
+        "highlight": true,
+        "corresponding": false
+      },
+      {
+        "name": "Qingquan Wang",
+        "highlight": false,
+        "corresponding": false
+      },
+      {
+        "name": "Xiaoli Liu",
+        "highlight": false,
+        "corresponding": true
+      },
+      {
+        "name": "Shidang Xu",
+        "highlight": false,
+        "corresponding": true
+      }
+    ],
+    "author_note": "† Corresponding author",
+    "venue": "PRCV 2026",
+    "year": 2026,
+    "status": "accepted",
+    "abstract": "Cascaded Dual-Scale Reconstruction (CDSR) learns whole-slide image representations from a small set of high-resolution patches. A two-stage sampler combines MIL attention ranking with QHVAE-based semantic clustering to select informative, diverse tissue regions. A Local-to-Global Network then combines local morphology and global context through reconstruction. Experiments on Camelyon-16, TCGA-NSCLC, and TCGA-RCC show that roughly nine high-resolution patches per slide can support strong classification performance while substantially reducing training data and computation.",
+    "abstract_label": "Abstract overview",
+    "image": "/images/publications/cdsr/figure-2.png",
+    "detail_image": "/images/publications/cdsr/figure-2.png",
+    "figures": [
+      {
+        "title": "Overview of the Cascaded Dual-Scale Reconstruction (CDSR) framework",
+        "width": 2303,
+        "height": 1295
+      },
+      {
+        "title": "Overview of the Cascaded Dual-Scale Reconstruction (CDSR) framework",
+        "width": 2303,
+        "height": 1295
+      }
+    ],
+    "links": {
+      "pdf": "https://arxiv.org/pdf/2508.01641",
+      "poster": "/files/publications/cdsr/poster.pdf",
+      "arxiv": "https://arxiv.org/abs/2508.01641"
+    },
+    "license": {
+      "credit": "Liu et al. arXiv:2508.01641 (2025).",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "sources": [
+      "https://arxiv.org/html/2508.01641v1",
+      "https://arxiv.org/abs/2508.01641"
+    ],
+    "acceptance_source": "User-provided PRCV 2026 acceptance and local CDSR_Poster.pdf",
+    "retrieved": "2026-10-12"
   }
 ]

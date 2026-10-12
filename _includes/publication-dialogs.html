@@ -5,16 +5,21 @@
     <button type="button" class="publication-dialog__close" data-publication-close aria-label="Close publication details">×</button>
   </div>
   <div class="publication-dialog__body">
-    <p class="publication-dialog__eyebrow">{{ paper.venue | escape }} · {{ paper.year }} · Article {{ paper.article_number }}</p>
+    <p class="publication-dialog__eyebrow">{{ paper.venue | escape }}{% unless paper.links.poster %} · {{ paper.year }}{% endunless %}{% if paper.article_number %} · Article {{ paper.article_number }}{% endif %}</p>
     <h2 id="publication-dialog-title-{{ paper.id }}">{{ paper.title | escape }}</h2>
     <p class="publication-dialog__authors">{% include publication-authors.html paper=paper %}</p>
-    <p class="publication-dialog__author-note">* Equal contribution · † Corresponding author</p>
+    <p class="publication-dialog__author-note">{{ paper.author_note | default: '* Equal contribution · † Corresponding author' | escape }}</p>
     <div class="publication-actions">
+      {% if paper.links.poster %}
+      <a class="publication-action" href="{{ paper.links.poster | relative_url }}" target="_blank" rel="noopener noreferrer">Poster</a>
+      <a class="publication-action" href="{{ paper.links.arxiv }}" target="_blank" rel="noopener noreferrer">arXiv</a>
+      {% else %}
       <a class="publication-action" href="{{ paper.links.paper }}" target="_blank" rel="noopener noreferrer">Paper</a>
       <a class="publication-action" href="{{ paper.links.pdf | relative_url }}" target="_blank" rel="noopener noreferrer">PDF</a>
       <a class="publication-action" href="{{ paper.links.code }}" target="_blank" rel="noopener noreferrer">Code</a>
+      {% endif %}
     </div>
-    <h3>Abstract</h3>
+    <h3>{{ paper.abstract_label | default: 'Abstract' | escape }}</h3>
     <p>{{ paper.abstract | escape }}</p>
     <figure class="publication-dialog__figure">
       <a href="{{ paper.detail_image | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="Open full-size framework figure">

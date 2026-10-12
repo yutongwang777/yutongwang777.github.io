@@ -11,11 +11,16 @@
     <div class="publication-card__content">
       <h2 id="publication-title-{{ paper.id }}" class="publication-card__title">{{ paper.title | escape }}</h2>
       <p class="publication-card__authors">{% include publication-authors.html paper=paper %}</p>
-      <p class="publication-card__author-note">* Equal contribution · † Corresponding author</p>
+      <p class="publication-card__author-note">{{ paper.author_note | default: '* Equal contribution · † Corresponding author' | escape }}</p>
       <div class="publication-actions" aria-label="Publication resources">
+        {% if paper.links.poster %}
+        <a class="publication-action" href="{{ paper.links.poster | relative_url }}" target="_blank" rel="noopener noreferrer">Poster</a>
+        <a class="publication-action" href="{{ paper.links.arxiv }}" target="_blank" rel="noopener noreferrer">arXiv</a>
+        {% else %}
         <a class="publication-action pub-details" href="{{ paper.links.pdf | relative_url }}" data-publication-id="{{ paper.id }}">Details</a>
         {% if paper.links.paper %}<a class="publication-action" href="{{ paper.links.paper }}" target="_blank" rel="noopener noreferrer">Paper</a>{% endif %}
         {% if paper.links.code %}<a class="publication-action" href="{{ paper.links.code }}" target="_blank" rel="noopener noreferrer">Code</a>{% endif %}
+        {% endif %}
       </div>
     </div>
   </article>
