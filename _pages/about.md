@@ -14,6 +14,7 @@ Hi, I’m **Yutong (Anthony) Wang**, a master’s student in the School of Elect
 
 My research experience includes work with Prof. Shidang Xu at SCUT and a research internship in Prof. Xiaohui Xie's lab at the University of California, Irvine. I am interested in research opportunities in machine learning for clinical and biomedical applications.
 
+I am currently seeking **PhD opportunities** starting in **Spring or Fall 2028**.
 
 # 🔥 News {#news}
 

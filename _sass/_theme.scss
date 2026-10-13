@@ -1,0 +1,59 @@
+.masthead__menu {
+  display: flex;
+  align-items: center;
+  gap: .6em;
+  .greedy-nav { flex: 1; min-width: 0; }
+}
+
+.theme-toggle {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid #dce1e6;
+  border-radius: 50%;
+  color: #494e52;
+  background: #fff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  &:hover { background: #f0f3f6; }
+  &:focus-visible { outline: 3px solid #6a97cb; outline-offset: 3px; }
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  body { background: #11151b; color: #e1e5eb; }
+  .masthead, .greedy-nav, .greedy-nav .hidden-links {
+    background: #171b22;
+    border-color: #363d48;
+  }
+  .greedy-nav a, .author__urls a { color: #e1e5eb; }
+  .greedy-nav a:hover { color: #a9c9ff; }
+  .greedy-nav a:before { background: #a9c9ff; }
+  .theme-toggle { background: #242b36; color: #f5d37c; border-color: #465163; }
+  .theme-toggle:hover { background: #343e4d; }
+  .page__content a { color: #a9c9ff; }
+  .page__content h1, .site-footer, .author__avatar img { border-color: #363d48; }
+  .site-footer { color: #bdc6d2; }
+  .education-card, .publication-card, .publication-dialog {
+    background: #1b212b;
+    color: #e1e5eb;
+    border-color: #363d48;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, .22);
+  }
+  .publication-card:hover { border-color: #8db9ff; box-shadow: 0 7px 22px rgba(0, 0, 0, .4); }
+  .education-card__dates, .page__content .publication-card__author-note,
+  .publication-dialog__author-note, .publication-dialog__credit { color: #b4bfce; }
+  .publication-dialog__header { background: #1b212b; border-color: #363d48; }
+  .publication-dialog__credit { border-color: #363d48; }
+  .publication-dialog__eyebrow, .publication-dialog__back,
+  .publication-dialog__close, .publication-card__authors sup,
+  .publication-dialog__authors sup { color: #a9c9ff; }
+  .publication-action, .page__content .publication-action {
+    background: #1b212b; color: #a9c9ff; border-color: #8db9ff;
+    &:visited { color: #a9c9ff; }
+    &:hover { background: #a9c9ff; color: #11151b; }
+  }
+  .education-card__logo img { background: #fff; border-radius: 4px; }
+}

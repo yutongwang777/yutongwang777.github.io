@@ -2,6 +2,21 @@
    FOOTER
    ========================================================================== */
 
+.site-footer {
+  clear: both;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .5em 2em;
+  margin: 2em 1em 0;
+  padding: .75em 0;
+  border-top: 1px solid $light-gray;
+  color: $text-color;
+  font-family: $global-font-family;
+  font-size: .8em;
+  line-height: 1.5;
+}
+
 .page__footer {
   @include clearfix;
   float: left;
