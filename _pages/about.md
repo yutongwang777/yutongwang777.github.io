@@ -35,3 +35,4 @@ I am currently seeking **PhD opportunities** starting in **Spring or Fall 2028**
 # Gallery {#gallery}
 
 {% include gallery.html %}
+

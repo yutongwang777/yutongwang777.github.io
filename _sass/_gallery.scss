@@ -47,7 +47,7 @@ html[data-theme="dark"] {
 }
 .life-gallery__photo { aspect-ratio: 4 / 3; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 12px; color: #fff; }
 .life-gallery__photo--image {
-  position: relative; background: #17263b;
+  position: relative; background: inherit;
   img { display: block; width: 100%; height: 100%; object-fit: cover; }
 }
 .life-gallery__track .life-gallery__photo--image img { position: absolute; inset: 0; }

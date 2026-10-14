@@ -19,6 +19,7 @@
           <p class="life-gallery__meta">{{ item.meta | escape }}</p>
           <h2>{{ item.title | escape }}</h2>
           <p class="life-gallery__description">{{ item.description | escape }}</p>
+          {% if item.link %}<p class="life-gallery__description"><a href="{{ item.link | escape }}" target="_blank" rel="noopener noreferrer">{{ item.link_label | escape }}</a></p>{% endif %}
           {% unless item.image %}<span class="life-gallery__placeholder">Placeholder · Content coming soon</span>{% endunless %}
         </div>
       </article>
