@@ -1,0 +1,33 @@
+<section class="life-gallery" aria-label="Life outside research" aria-roledescription="carousel">
+  <div class="life-gallery__viewport" tabindex="0" aria-label="Gallery cards. Use left and right arrow keys to browse.">
+    <button type="button" class="life-gallery__arrow life-gallery__arrow--prev" aria-label="Previous gallery card"><span aria-hidden="true">‹</span></button>
+    <button type="button" class="life-gallery__arrow life-gallery__arrow--next" aria-label="Next gallery card"><span aria-hidden="true">›</span></button>
+    <div class="life-gallery__track">
+      {% for item in site.data.gallery %}
+      <article class="life-gallery__card" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Expand {{ item.title | escape }}">
+        {% if item.image %}
+        <div class="life-gallery__photo life-gallery__photo--image">
+          <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt | escape }}" loading="lazy">
+        </div>
+        {% else %}
+        <div class="life-gallery__photo life-gallery__photo--{{ item.theme }}" aria-label="Photo placeholder {{ forloop.index }}">
+          <span class="life-gallery__number">0{{ forloop.index }}</span>
+          <span class="life-gallery__photo-label">YOUR PHOTO HERE</span>
+        </div>
+        {% endif %}
+        <div class="life-gallery__body">
+          <p class="life-gallery__meta">{{ item.meta | escape }}</p>
+          <h2>{{ item.title | escape }}</h2>
+          <p class="life-gallery__description">{{ item.description | escape }}</p>
+          {% unless item.image %}<span class="life-gallery__placeholder">Placeholder · Content coming soon</span>{% endunless %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="life-gallery__dots" aria-label="Gallery pagination"></div>
+  <dialog class="life-gallery__dialog" aria-label="Gallery detail">
+    <button type="button" class="life-gallery__close" aria-label="Close gallery detail">×</button>
+    <div class="life-gallery__detail"></div>
+  </dialog>
+</section>

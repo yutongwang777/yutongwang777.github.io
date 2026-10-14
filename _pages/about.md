@@ -34,7 +34,4 @@ I am currently seeking **PhD opportunities** starting in **Spring or Fall 2028**
 
 # Gallery {#gallery}
 
-- **July 2024** - Third Prize, National Biomedical Engineering Innovation Design Competition.
-- **June 2024** - First Prize, Guangdong Biomedical Engineering Innovation Design Competition.
-
-Competition project: **Neurovascular Coupling Mechanism of Adolescent Myopia Based on EEG-fNIRS Fusion**. Contributing member at SCUT's Medical Information and Neuroimaging Lab, supervised by Prof. Kai Wu.
+{% include gallery.html %}
