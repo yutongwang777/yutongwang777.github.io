@@ -1,3 +1,8 @@
+// Profile icons use dark/light foreground colors instead of fixed brand colors.
+.profile_box .profile-icon {
+  color: #494e52;
+}
+
 .masthead__menu {
   display: flex;
   align-items: center;
@@ -23,6 +28,7 @@
 
 html[data-theme="dark"] {
   color-scheme: dark;
+  .profile_box .profile-icon { color: #e1e5eb; }
   body { background: #11151b; color: #e1e5eb; }
   .masthead, .greedy-nav, .greedy-nav .hidden-links {
     background: #171b22;
