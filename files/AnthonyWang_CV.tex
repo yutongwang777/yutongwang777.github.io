@@ -1,0 +1,61 @@
+% Editable source for AnthonyWang_CV.pdf
+% Compile with: pdflatex AnthonyWang_CV.tex
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=0.6in,top=0.55in,bottom=0.6in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.25em, label=\textbullet, nosep, topsep=0pt}
+
+% Section and project formatting can be adjusted here.
+\newcommand{\cvsection}[1]{\vspace{0.8em}\textbf{\MakeUppercase{#1}}\par\vspace{-0.5em}\noindent\rule{\linewidth}{0.4pt}\par\vspace{-0.5em}}
+\newcommand{\project}[3]{\vspace{0.8em}\textbf{#1}\\\textit{#2}\\\textit{#3}\par}
+
+\begin{document}
+\begin{center}
+    {\large\bfseries Yutong Wang}\\[2pt]
+    +86 18912988997 \;|\; \href{mailto:anthonywang0705@gmail.com}{anthonywang0705@gmail.com} \;|\; \href{https://yutongwang777.github.io/}{https://yutongwang777.github.io/}
+\end{center}
+\vspace{-1em}
+
+\cvsection{Education}
+\textbf{South China University of Technology} \hfill Sep. 2022 - June 2026(expected)\\
+B.Eng. Biomedical Engineering
+
+\cvsection{Research Experience}
+\textbf{Neural Field-Based Registration on Histopathology Images}\\
+\textit{Xie Lab (University of California, Irvine)}\\
+\textit{Research Intern (Supervisor: Prof. Xiaohui Xie)}
+\begin{itemize}
+    \item We proposed a neural field-based registration pipeline for histopathological images, enabling spatial alignment across different modalities of DAPI-stained tissues.
+    \item Following a coarse-to-fine strategy, we first derive outline-based and patch-based affine transform matrix, and finally carry out a strongly supervised fusion step with the aid of Neural Field.
+    \item We incorporated pretrained Cellpose-SAM into the pipeline. By jointly optimizing the registration loss and segmentation loss, the method improves registration speed while maintaining alignment accuracy.
+\end{itemize}
+
+\project{An Electron-Density Point-Cloud Framework for DPI Prediction\\(Under Review: \textit{Nature Communications})}{Xu Lab (SCUT)}{Core Member (Supervisor: Prof. Shidang Xu)}
+\begin{itemize}
+    \item Introduced, for the first time, electron cloud structures of molecules computed by quantum chemical computation methods into Drug--Protein Interaction prediction tasks.
+    \item Developed E-CloudBind, a structure-based DPI model that fuses electron-density point clouds with covalent molecular graphs and a heterogeneous GNN to predict protein--ligand affinity.
+    \item Created a density-adaptive interaction definition, yielding robustness to coordinate noise, low-resolution structures, and AlphaFold inputs.
+    \item Achieved state-of-the-art accuracy on PDBbind datasets while maintaining minimal sensitivity to resolution/source; demonstrated superior generalization on out-of-distribution splits.
+\end{itemize}
+
+\project{Minimal High-Resolution Patches Are Sufficient for Whole Slide Image Representation via Cascaded Dual-Scale Reconstruction}{Xu Lab (SCUT)}{Contributing Member (Supervisor: Prof. Shidang Xu)}
+\begin{itemize}
+    \item We propose a two-stage sampling method based on attention mechanisms and clustering, whose sampling performance surpasses existing purely random sampling and single-stage sampling approaches.
+    \item We design a self-supervised feature extractor for high-resolution images that, while drastically reducing the number of training samples, improves both training speed and model performance.
+    \item On a classification task, the model uses only 4.5\% of the data yet improves over state-of-the-art methods by 6.3 percentage points in accuracy and 5.5 points in AUC.
+\end{itemize}
+
+\project{Concentric Dual Fusion Attention-MIL framework for WSI image segmentation}{Xu Lab (SCUT)}{Contributing Member (Supervisor: Prof. Shidang Xu)}
+\begin{itemize}
+    \item We propose a point-to-area feature enhancement method that leverages a channel-wise point-to-area attention mechanism to assign feature weights to each patch, enhancing representational capacity without requiring self-supervised pretraining.
+    \item A point-to-point spatial fusion strategy is designed, employing a concentric-row attention mechanism to precisely control the influence of distant patches during feature fusion.
+    \item The model demonstrates significantly improved performance over traditional MIL methods in multi-cancer subtype classification tasks, indicating stronger classification capability.
+\end{itemize}
+
+\end{document}
